@@ -1,0 +1,5 @@
+*.config.js
+*.config.ts
+.husky/
+.next/
+node_modules/
