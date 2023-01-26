@@ -1,4 +1,4 @@
-## Vortice Tech Site
+## Vortico Tech Site
 
 First, run the development server:
 

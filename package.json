@@ -1,17 +1,17 @@
 {
-  "name": "vortice-site",
+  "name": "vortico-site",
   "version": "1.0.0",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vortice-tech/vortice-site.git"
+    "url": "git+https://github.com/vortico/vortico-site.git"
   },
   "author": "José Antonio Perdiguero López",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/vortice-tech/vortice-site/issues"
+    "url": "https://github.com/vortico/vortic-site/issues"
   },
-  "homepage": "https://vortice.tech",
+  "homepage": "https://vortico.tech",
   "scripts": {
     "start": "npm run dev",
     "dev": "next",

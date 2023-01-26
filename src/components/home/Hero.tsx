@@ -24,7 +24,7 @@ export default function Hero() {
         <div className="mt-10 flex justify-center gap-6 text-sm">
           <div className="h-12 w-auto">
             <Link
-              href="https://github.com/vortice-tech"
+              href="https://github.com/vortico/"
               className="inline-flex h-full items-center rounded-full bg-brand-500 px-10 text-white hover:bg-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600 dark:bg-brand-600 dark:text-primary-100 dark:hover:bg-brand-500 dark:focus:ring-brand-300"
             >
               <span className="text-left text-lg font-semibold">About us</span>

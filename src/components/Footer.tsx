@@ -3,20 +3,20 @@ import React from 'react'
 
 const links = [
   {
-    name: 'About Vórtice',
-    links: [{ name: 'GitHub', url: 'https://github.com/vortice-tech' }],
+    name: 'About Vortico',
+    links: [{ name: 'GitHub', url: 'https://github.com/vortico' }],
   },
   {
-    name: 'About Vórtice',
-    links: [{ name: 'GitHub', url: 'https://github.com/vortice-tech' }],
+    name: 'About Vortico',
+    links: [{ name: 'GitHub', url: 'https://github.com/vortico' }],
   },
   {
-    name: 'About Vórtice',
-    links: [{ name: 'GitHub', url: 'https://github.com/vortice-tech' }],
+    name: 'About Vortico',
+    links: [{ name: 'GitHub', url: 'https://github.com/vortico' }],
   },
   {
-    name: 'About Vórtice',
-    links: [{ name: 'GitHub', url: 'https://github.com/vortice-tech' }],
+    name: 'About Vortico',
+    links: [{ name: 'GitHub', url: 'https://github.com/vortico' }],
   },
 ]
 
@@ -39,7 +39,7 @@ export default function Footer() {
       </div>
       <div className="flex items-center gap-x-2 pt-10 text-brand-500">
         <div className="h-6 w-6 md:h-7 md:w-7" />
-        <span className="text-2xl md:text-3xl">Vórtice</span>
+        <span className="text-2xl md:text-3xl">Vortico</span>
       </div>
     </footer>
   )

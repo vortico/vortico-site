@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 
 module.exports = {
-  siteUrl: 'https://vortice.tech',
+  siteUrl: 'https://vortico.tech',
   generateRobotsTxt: true,
 }
