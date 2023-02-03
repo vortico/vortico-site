@@ -6,7 +6,7 @@ export default function Hero() {
     <>
       <section className="mx-auto max-w-5xl px-8 pt-20 text-center sm:pt-24 lg:pt-32">
         <h1 className="text-4xl font-extrabold text-primary-700 dark:text-primary-200 sm:text-5xl lg:text-6xl">
-          Elevate Your Business with Vórtice&apos;s Technology Consulting
+          Elevate Your Business with Vortico&apos;s Technology Consulting
         </h1>
         <p className="mx-auto mt-10 max-w-3xl text-xl text-gray-500 dark:text-gray-400 sm:text-2xl">
           We help companies build and scale their AI and Technology capabilities.
