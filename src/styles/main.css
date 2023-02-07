@@ -5,5 +5,5 @@
 /*! purgecss end ignore */
 
 body {
-  @apply bg-primary-100 text-primary-600 transition-colors duration-500 dark:bg-primary-800 dark:text-primary-400;
+  @apply bg-primary-800 text-primary-400 transition-colors duration-500;
 }

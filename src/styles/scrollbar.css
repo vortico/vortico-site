@@ -10,7 +10,7 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: theme('colors.primary.400');
+    background-color: theme('colors.primary.600');
     border-radius: 10px;
     border: 2px solid transparent;
     background-clip: padding-box;
@@ -20,7 +20,6 @@
     scrollbar-color: theme('colors.primary.600') transparent;
 
     ::-webkit-scrollbar-thumb {
-      background-color: theme('colors.primary.600');
     }
   }
 }

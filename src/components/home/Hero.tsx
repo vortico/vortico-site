@@ -4,7 +4,7 @@ import React from 'react'
 export default function Hero() {
   return (
     <>
-      <section className="mx-auto max-w-5xl px-8 pt-20 text-center sm:pt-24 lg:pt-32">
+      <section className="mx-auto max-w-5xl px-8 py-20 text-center sm:py-24 lg:py-32">
         <h1 className="text-4xl font-extrabold text-primary-700 dark:text-primary-200 sm:text-5xl lg:text-6xl">
           Elevate Your Business with Vortico&apos;s Technology Consulting
         </h1>

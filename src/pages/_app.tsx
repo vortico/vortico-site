@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <DefaultSeo {...SEO} />
-      <ThemeProvider defaultTheme="system" attribute="class" disableTransitionOnChange>
+      <ThemeProvider defaultTheme="dark" attribute="class" disableTransitionOnChange>
         <Component {...pageProps} />
       </ThemeProvider>
     </>
