@@ -9,7 +9,7 @@ export default function Background() {
   const squares2Scale = useTransform(scrollYProgress, [0, 100], [1, 80])
 
   return (
-    <>
+    <div id="background">
       <div className="fixed top-0 -z-50 h-screen w-screen">
         <div className="relative m-auto w-fit max-w-[5120px] overflow-hidden">
           <motion.div style={{ scale: vortexScale }}>
@@ -52,6 +52,6 @@ export default function Background() {
           </motion.div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
