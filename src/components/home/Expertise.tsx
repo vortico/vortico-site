@@ -14,7 +14,9 @@ function ExpertiseItem({ icon, title, description }: ExpertiseItemProps) {
         {icon}
       </span>
       <h3 className="text-2xl font-bold">{title}</h3>
-      <p className="mt-2 max-h-0 overflow-hidden transition-all duration-500 group-hover:max-h-screen">{description}</p>
+      <p className="mt-2 max-h-full overflow-hidden transition-all duration-500 md:max-h-0 md:group-hover:max-h-screen">
+        {description}
+      </p>
     </li>
   )
 }
