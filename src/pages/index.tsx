@@ -5,6 +5,7 @@ import React from 'react'
 import Background from '@/components/home/Background'
 import WriteUs from '@/components/home/WriteUs'
 import MissionVision from '@/components/home/MissionVision'
+import Expertise from '@/components/home/Expertise'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         </header>
         <main className="space-y-20 bg-primary-900/50 py-20 sm:space-y-32 sm:py-32 md:space-y-40 md:py-40">
           <MissionVision />
+          <Expertise />
           <WriteUs />
         </main>
         <Footer />
