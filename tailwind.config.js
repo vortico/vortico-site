@@ -33,7 +33,7 @@ module.exports = {
     },
     fontFamily: {
       serif: ['Montserrat', ...defaultTheme.fontFamily.serif],
-      sans: ['"Fira Sans"', ...defaultTheme.fontFamily.sans],
+      sans: ['Lato', ...defaultTheme.fontFamily.sans],
       mono: ['"Fira Mono"', ...defaultTheme.fontFamily.mono],
     },
   },
