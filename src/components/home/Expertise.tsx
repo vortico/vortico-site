@@ -35,9 +35,10 @@ export default function Expertise() {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 md:px-8">
         <h2 className="text-3xl font-bold lg:text-5xl">Expertise</h2>
         <p className="mt-8">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet felis quis mi congue
-          consectetur. Morbi a magna viverra, fermentum lacus a, mollis sapien. Nulla orci felis, porta sit amet iaculis
-          id, porttitor eget mauris. Curabitur odio neque, molestie id nibh id, semper tincidunt sapien.
+          With over two decades of experience, we are confident in our ability to provide unique expert services. We are
+          computer scientists, software engineers, cloud architects, machine learning engineers and researchers,
+          developers, and mathematicians, all to help you bring your projects to life and reach new heights for your
+          company. We provide the support and guidance needed to turn your vision into a successful reality.
         </p>
         <ul className="relative mt-8 ml-4 list-inside space-y-6 border-l-2 border-brand-500 py-4 pl-8">
           <ExpertiseItem
