@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react'
 import {
   AcademicCapIcon,
-  BanknotesIcon,
   CloudIcon,
   CodeBracketIcon,
   CpuChipIcon,
@@ -44,38 +43,40 @@ export default function Expertise() {
           <ExpertiseItem
             icon={<CpuChipIcon className="h-6 w-6 text-brand-600" />}
             title="Machine Learning"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet felis quis mi congue consectetur. Morbi a magna viverra, fermentum lacus a, mollis sapien. Nulla orci felis, porta sit amet iaculis id, porttitor eget mauris. Curabitur odio neque, molestie id nibh id, semper tincidunt sapien."
+            description="We can help you unlock the full potential of your products, by leveraging the latest techniques and algorithms in the fields of AI and data analysis. Whether you're looking to improve your product recommendations, optimize your supply chain, or enhance your customer experience, we've got you covered. So why wait?"
           />
           <ExpertiseItem
             icon={<CodeBracketIcon className="h-6 w-6 text-brand-600" />}
             title="Software Development"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet felis quis mi congue consectetur. Morbi a magna viverra, fermentum lacus a, mollis sapien. Nulla orci felis, porta sit amet iaculis id, porttitor eget mauris. Curabitur odio neque, molestie id nibh id, semper tincidunt sapien."
+            description="Are you in need of reliable software to help your business stay ahead of the competition? We offer top-quality development services that are tailored to meet the unique needs of your business. Using the latest technologies and frameworks to build scalable, flexible, and robust software solutions, we can help you achieve your business objectives. From custom software development to integration, migration, and maintenance, our services cover the full development lifecycle. We work closely with our clients to ensure that their software solutions are not just functional, but also user-friendly and visually appealing."
+          />
+          <ExpertiseItem
+            icon={<PencilSquareIcon className="h-6 w-6 text-brand-600" />}
+            title="Software Architecture"
+            description="Build software architectures that are modular, flexible, and designed for reuse, so that your software systems can be easily updated and scaled as your business grows. We focus on quality and efficiency, and we deliver software architecture designs in a timely and cost-effective manner."
           />
           <ExpertiseItem
             icon={<CloudIcon className="h-6 w-6 text-brand-600" />}
             title="Cloud Solutions and Innovation"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet felis quis mi congue consectetur. Morbi a magna viverra, fermentum lacus a, mollis sapien. Nulla orci felis, porta sit amet iaculis id, porttitor eget mauris. Curabitur odio neque, molestie id nibh id, semper tincidunt sapien."
+            description="Are you looking for new ways to innovate your business and stay ahead of the competition? We think cloud native, and will work with you to create a customized cloud strategy that aligns with your business objectives, helping you to reduce costs, increase agility, and drive growth. From cloud migration and integration to cloud-native development, automation, and management. We'll help you leverage the latest cloud technologies and frameworks to build secure, scalable, and highly available cloud solutions that meet your specific needs. And with our focus on innovation, we'll ensure that your cloud solutions are not just efficient, but also help you to differentiate your business from the competition."
           />
+          <ExpertiseItem
+            icon={<CreditCardIcon className="h-6 w-6 text-brand-600" />}
+            title="FinTech & WealthTech"
+            description="Build robust and reliable systems that can handle massive scale and high availability. We have a track record in FinTech projects, and specifically in building distributed, massively scalable, and fault-tolerant systems that are designed to withstand even the most demanding workloads. We will work with you to design a customized solution that aligns with your business objectives, ensuring that you're able to meet your customers' needs in real-time, 24/7."
+          />
+          <ExpertiseItem
+            icon={<AcademicCapIcon className="h-6 w-6 text-brand-600" />}
+            title="Tech Training & Courses"
+            description="We offer a wide range of courses, from beginner-level introductions to in-depth technical training on specific technologies and frameworks. Whether you're looking to learn web development, data science, cloud computing, or something else entirely, we've got you covered. Our training programs are designed to be flexible and customizable, with options for both online and in-person training. We also offer tailored training solutions for businesses, so you can train your entire team on the latest technologies and best practices."
+          />
+          {/*
           <ExpertiseItem
             icon={<BanknotesIcon className="h-6 w-6 text-brand-600" />}
             title="WealthTech"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet felis quis mi congue consectetur. Morbi a magna viverra, fermentum lacus a, mollis sapien. Nulla orci felis, porta sit amet iaculis id, porttitor eget mauris. Curabitur odio neque, molestie id nibh id, semper tincidunt sapien."
           />
-          <ExpertiseItem
-            icon={<CreditCardIcon className="h-6 w-6 text-brand-600" />}
-            title="FinTech"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet felis quis mi congue consectetur. Morbi a magna viverra, fermentum lacus a, mollis sapien. Nulla orci felis, porta sit amet iaculis id, porttitor eget mauris. Curabitur odio neque, molestie id nibh id, semper tincidunt sapien."
-          />
-          <ExpertiseItem
-            icon={<AcademicCapIcon className="h-6 w-6 text-brand-600" />}
-            title="Tech Training & Courses"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet felis quis mi congue consectetur. Morbi a magna viverra, fermentum lacus a, mollis sapien. Nulla orci felis, porta sit amet iaculis id, porttitor eget mauris. Curabitur odio neque, molestie id nibh id, semper tincidunt sapien."
-          />
-          <ExpertiseItem
-            icon={<PencilSquareIcon className="h-6 w-6 text-brand-600" />}
-            title="Software Architecture"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet felis quis mi congue consectetur. Morbi a magna viverra, fermentum lacus a, mollis sapien. Nulla orci felis, porta sit amet iaculis id, porttitor eget mauris. Curabitur odio neque, molestie id nibh id, semper tincidunt sapien."
-          />
+          */}
         </ul>
       </div>
     </section>
