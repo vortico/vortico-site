@@ -32,7 +32,7 @@ export default function Expertise() {
   return (
     <section id="expertise">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 md:px-8">
-        <h2 className="text-3xl font-bold lg:text-5xl">Expertise</h2>
+        <h2 className="text-3xl font-bold lg:text-5xl">What sets us apart</h2>
         <p className="mt-8">
           With over two decades of experience, we are confident in our ability to provide unique expert services. We are
           computer scientists, software engineers, cloud architects, machine learning engineers and researchers,
