@@ -1,5 +1,19 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { LightBulbIcon, RocketLaunchIcon } from '@heroicons/react/24/outline'
+
+interface IconProps {
+  icon: ReactNode
+}
+
+function Icon({ icon }: IconProps) {
+  return (
+    <div className="flex h-20 w-20 flex-none overflow-hidden rounded-full bg-brand-800 p-[0.1875rem] shadow ring-1 ring-primary-800/30 lg:h-28 lg:w-28">
+      <div className="flex flex-1 items-center justify-center rounded-full bg-brand-500 p-3 text-brand-800 lg:p-4">
+        {icon}
+      </div>
+    </div>
+  )
+}
 
 export default function MissionVision() {
   return (
@@ -14,11 +28,7 @@ export default function MissionVision() {
               </h2>
             </div>
             <div className="flex items-center justify-center md:basis-1/4">
-              <div className="flex h-20 w-20 flex-none overflow-hidden rounded-full p-[0.1875rem] shadow ring-1 ring-primary-900/30 dark:bg-brand-600 lg:h-28 lg:w-28">
-                <div className="flex flex-1 items-center justify-center rounded-full bg-brand-500/90 p-3 text-primary-100 dark:text-brand-600 lg:p-4">
-                  <LightBulbIcon />
-                </div>
-              </div>
+              <Icon icon={<LightBulbIcon />} />
             </div>
           </div>
           <div className="flex flex-1 flex-col gap-y-4 md:flex-row">
@@ -42,11 +52,7 @@ export default function MissionVision() {
               </ul>
             </div>
             <div className="flex items-center justify-center md:order-first md:basis-1/4">
-              <div className="flex h-20 w-20 flex-none overflow-hidden rounded-full p-[0.1875rem] shadow ring-1 ring-primary-900/30 dark:bg-brand-600 lg:h-28 lg:w-28">
-                <div className="flex flex-1 items-center justify-center rounded-full bg-brand-500/90 p-3 text-primary-100 dark:text-brand-600 lg:p-4">
-                  <RocketLaunchIcon />
-                </div>
-              </div>
+              <Icon icon={<RocketLaunchIcon />} />
             </div>
           </div>
         </div>
