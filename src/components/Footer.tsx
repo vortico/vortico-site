@@ -1,6 +1,6 @@
 import Link from '@/components/Link'
 import React from 'react'
-import VorticoIcon from '@/components/icons/VorticoIcon'
+import { VorticoIcon } from '@/components/icons'
 
 const links = [
   {

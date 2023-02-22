@@ -1,6 +1,6 @@
 import React, { ReactNode, useCallback, useMemo, useState } from 'react'
-import { Cog8ToothIcon } from '@heroicons/react/24/solid'
 import LinkButton from '@/components/LinkButton'
+import { BosqueIcon, BrumaIcon, CiclonIcon, FlamaIcon } from '@/components/icons'
 
 interface Product {
   icon: ReactNode
@@ -12,7 +12,7 @@ interface Product {
 
 const products: Product[] = [
   {
-    icon: <Cog8ToothIcon />,
+    icon: <FlamaIcon />,
     title: 'Flama',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet felis quis mi congue consectetur. Morbi a magna viverra, fermentum lacus a, mollis sapien. Nulla orci felis, porta sit amet iaculis id, porttitor eget mauris. Curabitur odio neque, molestie id nibh id, semper tincidunt sapien.',
@@ -20,7 +20,7 @@ const products: Product[] = [
     href: 'https://flama.dev',
   },
   {
-    icon: <Cog8ToothIcon />,
+    icon: <CiclonIcon />,
     title: 'Ciclon',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet felis quis mi congue consectetur. Morbi a magna viverra, fermentum lacus a, mollis sapien. Nulla orci felis, porta sit amet iaculis id, porttitor eget mauris. Curabitur odio neque, molestie id nibh id, semper tincidunt sapien.',
@@ -28,7 +28,7 @@ const products: Product[] = [
     href: 'https://ciclon.dev',
   },
   {
-    icon: <Cog8ToothIcon />,
+    icon: <BosqueIcon />,
     title: 'Bosque',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet felis quis mi congue consectetur. Morbi a magna viverra, fermentum lacus a, mollis sapien. Nulla orci felis, porta sit amet iaculis id, porttitor eget mauris. Curabitur odio neque, molestie id nibh id, semper tincidunt sapien.',
@@ -36,7 +36,7 @@ const products: Product[] = [
     href: 'https://bosque.dev',
   },
   {
-    icon: <Cog8ToothIcon />,
+    icon: <BrumaIcon />,
     title: 'Bruma',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet felis quis mi congue consectetur. Morbi a magna viverra, fermentum lacus a, mollis sapien. Nulla orci felis, porta sit amet iaculis id, porttitor eget mauris. Curabitur odio neque, molestie id nibh id, semper tincidunt sapien.',
@@ -52,11 +52,35 @@ interface ProductsItemProps {
   onClick: () => void
 }
 
+/*function ProductsItem({ product, isSelected, isOpen, onClick }: ProductsItemProps) {
+  return (
+    <li className="group flex list-item items-center justify-center">
+      <div
+        className={`cursor-pointer p-4 transition-all duration-500 ${
+          isOpen
+            ? isSelected
+              ? `h-36 w-36 bg-primary-400/60 md:h-40 md:w-40 lg:h-52 lg:w-52 ${product.textColor}`
+              : 'h-28 w-28 bg-primary-400/20 text-primary-400 md:h-32 md:w-32 lg:h-44 lg:w-44'
+            : `h-32 w-32 bg-primary-400/40 md:h-36 md:w-36 lg:h-48 lg:w-48 ${product.textColor}`
+        }`}
+        onClick={() => onClick()}
+      >
+        <div className="mx-auto h-16 w-16 md:h-20 md:w-20 lg:h-28 lg:w-28">{product.icon}</div>
+        <h3 className="mt-2 text-center text-xl font-bold lg:text-2xl">{product.title}</h3>
+      </div>
+    </li>
+  )
+}*/
+
 function ProductsItem({ product, isSelected, isOpen, onClick }: ProductsItemProps) {
   return (
-    <li className="group relative mx-auto list-item">
+    <li
+      className={`group block flex list-item h-36 w-full items-center justify-center transition-all duration-500 md:h-40 md:w-40 lg:h-52 lg:w-52 ${
+        isOpen ? (isSelected ? 'scale-110' : 'scale-90') : 'scale-100'
+      }`}
+    >
       <div
-        className={`h-32 w-32 cursor-pointer p-4 transition-colors duration-500 md:h-36 md:w-36 lg:h-48 lg:w-48 ${
+        className={`flex h-full cursor-pointer flex-col items-center justify-center gap-2 transition-all duration-500 ${
           isOpen
             ? isSelected
               ? `bg-primary-400/60 ${product.textColor}`
@@ -65,8 +89,8 @@ function ProductsItem({ product, isSelected, isOpen, onClick }: ProductsItemProp
         }`}
         onClick={() => onClick()}
       >
-        <div className="mx-auto h-16 w-16 md:h-20 md:w-20 lg:h-28 lg:w-28">{product.icon}</div>
-        <h3 className="mt-2 text-center text-xl font-bold lg:text-2xl">{product.title}</h3>
+        <div className="h-16 w-16 md:h-20 md:w-20 lg:h-28 lg:w-28">{product.icon}</div>
+        <h3 className="text-xl font-bold lg:text-2xl">{product.title}</h3>
       </div>
     </li>
   )
@@ -106,7 +130,7 @@ export default function Products() {
     <section id="products">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 md:px-8">
         <h2 className="text-3xl font-bold lg:text-5xl">Our Products</h2>
-        <ul className="mt-8 grid grid-cols-2 gap-8 md:grid-cols-4">
+        <ul className="mx-4 mt-8 flex flex-col items-center justify-around gap-8 md:flex-row">
           {products.map((product, i) => (
             <ProductsItem
               key={`product-${i}`}
