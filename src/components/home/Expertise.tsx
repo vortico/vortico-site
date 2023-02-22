@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode, useMemo, useState } from 'react'
 import {
   AcademicCapIcon,
   CloudIcon,
@@ -15,13 +15,23 @@ interface ExpertiseItemProps {
 }
 
 function ExpertiseItem({ icon, title, description }: ExpertiseItemProps) {
+  const [isClicked, setIsClicked] = useState<boolean>(false)
+  const [isHover, setIsHover] = useState<boolean>(false)
+
+  const isOpen = useMemo<boolean>(() => isClicked || isHover, [isClicked, isHover])
+
   return (
-    <li className="group list-item">
+    <li
+      className="list-item cursor-pointer"
+      onClick={() => setIsClicked(!isClicked)}
+      onMouseOver={() => setIsHover(true)}
+      onMouseOut={() => setIsHover(false)}
+    >
       <div className="absolute -left-4 -ml-px flex h-8 w-8 items-center justify-center rounded-full bg-brand-500 ring-2 ring-white ring-brand-800">
         <div className="h-6 w-6 text-brand-800">{icon}</div>
       </div>
       <h3 className="text-2xl font-bold">{title}</h3>
-      <p className="mt-2 max-h-full overflow-hidden transition-all duration-500 md:max-h-0 md:group-hover:max-h-screen">
+      <p className={`mt-2 overflow-hidden transition-all duration-500 ${isOpen ? 'max-h-screen' : 'max-h-0'}`}>
         {description}
       </p>
     </li>
