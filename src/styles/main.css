@@ -5,5 +5,5 @@
 /*! purgecss end ignore */
 
 body {
-  @apply bg-primary-800 text-primary-400;
+  @apply bg-primary-800 text-primary-100;
 }

@@ -59,9 +59,9 @@ function ProductsItem({ product, isSelected, isOpen, onClick }: ProductsItemProp
         className={`h-32 w-32 cursor-pointer p-4 transition-colors duration-500 md:h-36 md:w-36 lg:h-48 lg:w-48 ${
           isOpen
             ? isSelected
-              ? `bg-primary-500/70 ${product.textColor}`
-              : 'bg-primary-500/30 text-primary-500'
-            : `bg-primary-500/30 ${product.textColor}`
+              ? `bg-primary-400/60 ${product.textColor}`
+              : 'bg-primary-400/20 text-primary-400'
+            : `bg-primary-400/40 ${product.textColor}`
         }`}
         onClick={() => onClick()}
       >
@@ -82,7 +82,7 @@ function ProductsDescription({ product }: ProductDescriptionProps) {
       <h4 className={`border-b-2 border-primary-400 text-xl font-bold lg:text-2xl ${product.textColor}`}>
         {product.title}
       </h4>
-      <p className="mt-4 text-primary-200">{product.description}</p>
+      <p className="mt-4 text-primary-100">{product.description}</p>
       {product.href && <LinkButton color="brand" href={product.href} text="More info" className="mt-8" />}
     </div>
   )
@@ -118,7 +118,7 @@ export default function Products() {
           ))}
         </ul>
       </div>
-      <div className="mt-10 overflow-hidden bg-primary-500/70 px-4 sm:px-6 md:px-8">
+      <div className="mt-10 overflow-hidden bg-primary-400/60 px-4 sm:px-6 md:px-8">
         <div className={`mx-auto h-fit max-w-5xl transition-all duration-500  ${isOpen ? 'max-h-screen' : 'max-h-0'}`}>
           {selectedProduct && <ProductsDescription product={selectedProduct} />}
         </div>
