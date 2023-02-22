@@ -1,5 +1,6 @@
 import Link from '@/components/Link'
 import React from 'react'
+import VorticoIcon from '@/components/icons/VorticoIcon'
 
 const links = [
   {
@@ -39,7 +40,7 @@ export default function Footer() {
           ))}
         </div>
         <div className="flex items-center gap-x-2 pt-10 text-brand-500">
-          <div className="h-6 w-6 md:h-7 md:w-7" />
+          <VorticoIcon className="h-8 w-8 md:h-9 md:w-9" />
           <span className="text-2xl md:text-3xl">Vortico</span>
         </div>
       </div>
