@@ -1,9 +1,10 @@
-import { Cog8ToothIcon } from '@heroicons/react/24/solid'
+import { ArchiveBoxIcon, BeakerIcon, CubeIcon, TruckIcon } from '@heroicons/react/24/solid'
 import React, { ReactNode, useMemo, useState } from 'react'
 import { BosqueIcon, BrumaIcon, CiclonIcon, FlamaIcon } from '@/components/icons'
 
 interface Stage {
   title: string
+  description: string
   product: string
   icon: ReactNode
   productIcon: ReactNode
@@ -14,32 +15,36 @@ interface Stage {
 const stages: Stage[] = [
   {
     title: 'Training',
+    description: 'Adjust model parameters and learn from data',
     product: 'Bruma',
-    icon: <Cog8ToothIcon />,
+    icon: <BeakerIcon />,
     productIcon: <BrumaIcon />,
     textColor: 'text-[#00bbd5]',
     position: 'top-7 left-7',
   },
   {
-    title: 'Storing',
+    title: 'Versioning',
+    description: 'Protect and track model changes',
     product: 'Bosque',
-    icon: <Cog8ToothIcon />,
+    icon: <ArchiveBoxIcon />,
     productIcon: <BosqueIcon />,
     textColor: 'text-[#9E744F]',
     position: 'top-7 right-7',
   },
   {
     title: 'Serving',
+    description: 'Package and expose model APIs',
     product: 'Flama',
-    icon: <Cog8ToothIcon />,
+    icon: <CubeIcon />,
     productIcon: <FlamaIcon />,
     textColor: 'text-[#E25822]',
     position: 'bottom-7 right-7',
   },
   {
     title: 'Deploying',
+    description: 'Productionalise models',
     product: 'Ciclon',
-    icon: <Cog8ToothIcon />,
+    icon: <TruckIcon />,
     productIcon: <CiclonIcon />,
     textColor: 'text-[#00976E]',
     position: 'bottom-7 left-7',
@@ -70,7 +75,7 @@ interface StageIconProps {
 function StageIcon({ stage, isActive, setActive, setInactive }: StageIconProps) {
   return (
     <div
-      className={`h-12 w-12 rounded-full ring-2 ring-brand-800 ${
+      className={`h-12 w-12 rounded-full p-2 ring-2 ring-brand-800 ${
         isActive ? `bg-primary-500 ${stage.textColor}` : 'bg-brand-500 text-brand-800'
       }`}
       onClick={() => (isActive ? setInactive() : setActive())}
@@ -88,16 +93,17 @@ interface StageDescriptionProps {
 
 function StageDescription({ stage }: StageDescriptionProps) {
   return (
-    <div className="text-center">
+    <div className="space-y-2 text-center">
       <h3 className={`text-2xl font-bold md:text-3xl ${stage ? stage.textColor : 'text-primary-100'}`}>
-        {stage ? stage.product : 'Machine Learning'}
+        {stage?.product || 'Machine Learning'}
       </h3>
-      <p>{stage ? stage.title : 'Cycle of Life'}</p>
+      <h4 className="text-xl font-semibold text-primary-50">{stage?.title || 'Lifecycle'}</h4>
+      <p>{stage?.description || 'A roadmap to success'}</p>
     </div>
   )
 }
 
-export default function MachineLearningCycle() {
+export default function MachineLearningLifecycle() {
   const [active, setActive] = useState<number | null>(null)
 
   const selectedStage = useMemo<Stage | undefined>(() => (active !== null ? stages[active] : undefined), [active])
@@ -120,7 +126,7 @@ export default function MachineLearningCycle() {
                 />
               </div>
             ))}
-            <div className="absolute inset-[4.5rem] flex h-44 w-44 items-center justify-center">
+            <div className="absolute inset-y-20 inset-x-10 flex h-40 w-60 items-center justify-center">
               <StageDescription stage={selectedStage} />
             </div>
           </div>
