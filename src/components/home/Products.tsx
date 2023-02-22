@@ -52,26 +52,6 @@ interface ProductsItemProps {
   onClick: () => void
 }
 
-/*function ProductsItem({ product, isSelected, isOpen, onClick }: ProductsItemProps) {
-  return (
-    <li className="group flex list-item items-center justify-center">
-      <div
-        className={`cursor-pointer p-4 transition-all duration-500 ${
-          isOpen
-            ? isSelected
-              ? `h-36 w-36 bg-primary-400/60 md:h-40 md:w-40 lg:h-52 lg:w-52 ${product.textColor}`
-              : 'h-28 w-28 bg-primary-400/20 text-primary-400 md:h-32 md:w-32 lg:h-44 lg:w-44'
-            : `h-32 w-32 bg-primary-400/40 md:h-36 md:w-36 lg:h-48 lg:w-48 ${product.textColor}`
-        }`}
-        onClick={() => onClick()}
-      >
-        <div className="mx-auto h-16 w-16 md:h-20 md:w-20 lg:h-28 lg:w-28">{product.icon}</div>
-        <h3 className="mt-2 text-center text-xl font-bold lg:text-2xl">{product.title}</h3>
-      </div>
-    </li>
-  )
-}*/
-
 function ProductsItem({ product, isSelected, isOpen, onClick }: ProductsItemProps) {
   return (
     <li
