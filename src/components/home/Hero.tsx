@@ -16,7 +16,7 @@ export default function Hero() {
           succeed. Whether you&apos;re just starting out and looking to get a foothold in the industry, or you&apos;re
           an established company looking to take your performance to the next level, we&apos;re here to help. With a
           focus on delivering high quality, high performance solutions, we offer a range of services that can be
-          customized to fit your needs. From custom software development to data analysis and machine learning strategy,
+          customised to fit your needs. From custom software development to data analysis and machine learning strategy,
           we&apos;re here to support you every step of the way. Let&apos;s work together to make your business the best
           it can be!
         </p>*/}

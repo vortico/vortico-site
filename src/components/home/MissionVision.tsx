@@ -41,12 +41,12 @@ export default function MissionVision() {
                   of any ML project
                 </li>
                 <li>
-                  Offering <span className="text-brand-500">specialized training</span> and technical material to equip
+                  Offering <span className="text-brand-500">specialised training</span> and technical material to equip
                   our users with the knowledge and skills they need to successfully build robust ML products, as well as
                   broader Data Engineering and Software Engineering principles
                 </li>
                 <li>
-                  Utilizing a <span className="text-brand-500">proprietary consulting squad</span> that is capable of
+                  Utilising a <span className="text-brand-500">proprietary consulting squad</span> that is capable of
                   elevating any ML project to new heights through their expertise and innovative solutions.
                 </li>
               </ul>

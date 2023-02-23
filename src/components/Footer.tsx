@@ -49,6 +49,18 @@ interface Product {
 
 const products: Product[] = [
   {
+    icon: <BrumaIcon />,
+    title: 'Bruma',
+    textColor: 'text-[#00bbd5]',
+    href: 'https://bruma.dev',
+  },
+  {
+    icon: <BosqueIcon />,
+    title: 'Bosque',
+    textColor: 'text-[#9E744F]',
+    href: 'https://bosque.dev',
+  },
+  {
     icon: <FlamaIcon />,
     title: 'Flama',
     textColor: 'text-[#E25822]',
@@ -59,18 +71,6 @@ const products: Product[] = [
     title: 'Ciclon',
     textColor: 'text-[#00976E]',
     href: 'https://ciclon.dev',
-  },
-  {
-    icon: <BosqueIcon />,
-    title: 'Bosque',
-    textColor: 'text-[#9E744F]',
-    href: 'https://bosque.dev',
-  },
-  {
-    icon: <BrumaIcon />,
-    title: 'Bruma',
-    textColor: 'text-[#00bbd5]',
-    href: 'https://bruma.dev',
   },
 ]
 

@@ -12,6 +12,37 @@ interface Product {
 
 const products: Product[] = [
   {
+    icon: <BrumaIcon />,
+    title: 'Bruma',
+    description:
+      'Bruma is a data-science framework that has been specifically designed to simplify and ' +
+      'standardise the training steps of any machine-learning problem. ' +
+      'Bruma is perfectly integrated with Bosque, Ciclon, and Flama, which makes it easy to manage' +
+      " your models' training, deployment, and version control processes. This framework is suitable " +
+      'for both experimentation and productionalisation, allowing you to streamline the process of training' +
+      ' and deploying models from the very beginning. Bruma is designed to be user-friendly,' +
+      ' with an intuitive interface that allows you to quickly and easily create training pipelines ' +
+      'for your machine learning models. Bruma is an essential tool for anyone looking to streamline their' +
+      ' machine learning workflows and build more efficient and effective models.',
+    textColor: 'text-[#00bbd5]',
+    href: 'https://bruma.dev',
+  },
+  {
+    icon: <BosqueIcon />,
+    title: 'Bosque',
+    description:
+      'Bosque is a powerful tool designed for version-controlling machine-learning models in an efficient ' +
+      "and secure way. Bosque offers a robust set of features that allow you to manage and control your models' " +
+      'versions with ease, ensuring that you always have access to the most up-to-date versions. ' +
+      'Bosque also integrates perfectly with Flama and Ciclon. ' +
+      'This integration allows you to seamlessly deploy your models in a serverless environment, ' +
+      "ensuring that you can easily manage and control your models' versions, and rapidly deploy new models. " +
+      'With Bosque, you can be confident that your machine learning models are always up-to-date, secure,' +
+      ' and efficient, allowing you to focus on building great models and delivering value to your users.',
+    textColor: 'text-[#9E744F]',
+    href: 'https://bosque.dev',
+  },
+  {
     icon: <FlamaIcon />,
     title: 'Flama',
     description:
@@ -42,37 +73,6 @@ const products: Product[] = [
       'your machine-learning models up and running quickly and efficiently.',
     textColor: 'text-[#00976E]',
     href: 'https://ciclon.dev',
-  },
-  {
-    icon: <BosqueIcon />,
-    title: 'Bosque',
-    description:
-      'Bosque is a powerful tool designed for version-controlling machine-learning models in an efficient ' +
-      "and secure way. Bosque offers a robust set of features that allow you to manage and control your models' " +
-      'versions with ease, ensuring that you always have access to the most up-to-date versions. ' +
-      'Bosque also integrates perfectly with Flama and Ciclon. ' +
-      'This integration allows you to seamlessly deploy your models in a serverless environment, ' +
-      "ensuring that you can easily manage and control your models' versions, and rapidly deploy new models. " +
-      'With Bosque, you can be confident that your machine learning models are always up-to-date, secure,' +
-      ' and efficient, allowing you to focus on building great models and delivering value to your users.',
-    textColor: 'text-[#9E744F]',
-    href: 'https://bosque.dev',
-  },
-  {
-    icon: <BrumaIcon />,
-    title: 'Bruma',
-    description:
-      'Bruma is a data-science framework that has been specifically designed to simplify and ' +
-      'standardize the training steps of any machine-learning problem. ' +
-      'Bruma is perfectly integrated with Flama, Ciclon, and Bosque, which makes it easy to manage' +
-      " your models' training, deployment, and version control processes. This framework is suitable " +
-      'for both experimentation and productionalization, allowing you to streamline the process of training' +
-      ' and deploying models from the very beginning. Bruma is designed to be user-friendly,' +
-      ' with an intuitive interface that allows you to quickly and easily create training pipelines ' +
-      'for your machine learning models. Bruma is an essential tool for anyone looking to streamline their' +
-      ' machine learning workflows and build more efficient and effective models.',
-    textColor: 'text-[#00bbd5]',
-    href: 'https://bruma.dev',
   },
 ]
 

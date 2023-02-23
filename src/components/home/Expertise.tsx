@@ -14,7 +14,7 @@ const expertise: Expertise[] = [
     icon: <IconRobot className="h-full w-full" />,
     title: 'Machine Learning',
     description:
-      "We can help you unlock the full potential of your products, by leveraging the latest techniques and algorithms in the fields of AI and data analysis. Whether you're looking to improve your product recommendations, optimize your supply chain, or enhance your customer experience, we've got you covered. So why wait?",
+      "We can help you unlock the full potential of your products, by leveraging the latest techniques and algorithms in the fields of AI and data analysis. Whether you're looking to improve your product recommendations, optimise your supply chain, or enhance your customer experience, we've got you covered. So why wait?",
   },
   {
     id: 'expertise-software-development',
@@ -35,21 +35,21 @@ const expertise: Expertise[] = [
     icon: <IconCloudComputing className="h-full w-full" />,
     title: 'Cloud Solutions & Innovation',
     description:
-      "Are you looking for new ways to innovate your business and stay ahead of the competition? We think cloud native, and will work with you to create a customized cloud strategy that aligns with your business objectives, helping you to reduce costs, increase agility, and drive growth. From cloud migration and integration to cloud-native development, automation, and management. We'll help you leverage the latest cloud technologies and frameworks to build secure, scalable, and highly available cloud solutions that meet your specific needs. And with our focus on innovation, we'll ensure that your cloud solutions are not just efficient, but also help you to differentiate your business from the competition.",
+      "Are you looking for new ways to innovate your business and stay ahead of the competition? We think cloud native, and will work with you to create a customised cloud strategy that aligns with your business objectives, helping you to reduce costs, increase agility, and drive growth. From cloud migration and integration to cloud-native development, automation, and management. We'll help you leverage the latest cloud technologies and frameworks to build secure, scalable, and highly available cloud solutions that meet your specific needs. And with our focus on innovation, we'll ensure that your cloud solutions are not just efficient, but also help you to differentiate your business from the competition.",
   },
   {
     id: 'expertise-fintech-wealthtech',
     icon: <IconReportMoney className="h-full w-full" />,
     title: 'FinTech & WealthTech',
     description:
-      "Build robust and reliable systems that can handle massive scale and high availability. We have a track record in FinTech projects, and specifically in building distributed, massively scalable, and fault-tolerant systems that are designed to withstand even the most demanding workloads. We will work with you to design a customized solution that aligns with your business objectives, ensuring that you're able to meet your customers' needs in real-time, 24/7.",
+      "Build robust and reliable systems that can handle massive scale and high availability. We have a track record in FinTech projects, and specifically in building distributed, massively scalable, and fault-tolerant systems that are designed to withstand even the most demanding workloads. We will work with you to design a customised solution that aligns with your business objectives, ensuring that you're able to meet your customers' needs in real-time, 24/7.",
   },
   {
     id: 'expertise-tech-training',
     icon: <IconBook2 className="h-full w-full" />,
     title: 'Tech Training & Courses',
     description:
-      "We offer a wide range of courses, from beginner-level introductions to in-depth technical training on specific technologies and frameworks. Whether you're looking to learn web development, data science, cloud computing, or something else entirely, we've got you covered. Our training programs are designed to be flexible and customizable, with options for both online and in-person training. We also offer tailored training solutions for businesses, so you can train your entire team on the latest technologies and best practices.",
+      "We offer a wide range of courses, from beginner-level introductions to in-depth technical training on specific technologies and frameworks. Whether you're looking to learn web development, data science, cloud computing, or something else entirely, we've got you covered. Our training programs are designed to be flexible and customisable, with options for both online and in-person training. We also offer tailored training solutions for businesses, so you can train your entire team on the latest technologies and best practices.",
   },
 ]
 
