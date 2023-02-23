@@ -67,20 +67,18 @@ interface StageIconProps {
   stage: Stage
   isActive: boolean
 
-  setActive(): void
-
-  setInactive(): void
+  setIsActive(x: boolean): void
 }
 
-function StageIcon({ stage, isActive, setActive, setInactive }: StageIconProps) {
+function StageIcon({ stage, isActive, setIsActive }: StageIconProps) {
   return (
     <div
       className={`h-12 w-12 rounded-full p-2 ring-2 ring-brand-800 ${
         isActive ? `bg-primary-500 ${stage.textColor}` : 'bg-brand-500 text-brand-800'
       }`}
-      onClick={() => (isActive ? setInactive() : setActive())}
-      onMouseEnter={() => setActive()}
-      onMouseLeave={() => setInactive()}
+      onClick={() => setIsActive(isActive)}
+      onMouseEnter={() => setIsActive(true)}
+      onMouseLeave={() => setIsActive(false)}
     >
       {isActive ? stage.productIcon : stage.icon}
     </div>
@@ -121,8 +119,7 @@ export default function MachineLearningLifecycle() {
                 <StageIcon
                   stage={stages[i]}
                   isActive={active === i}
-                  setActive={() => setActive(i)}
-                  setInactive={() => setActive(null)}
+                  setIsActive={(x: boolean) => setActive(x ? i : null)}
                 />
               </div>
             ))}

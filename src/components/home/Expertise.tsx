@@ -23,7 +23,10 @@ function ExpertiseItem({ icon, title, description }: ExpertiseItemProps) {
   return (
     <li
       className="list-item cursor-pointer"
-      onClick={() => setIsClicked(!isClicked)}
+      onClick={() => {
+        setIsClicked(!isClicked)
+        setIsHover(false)
+      }}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
