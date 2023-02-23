@@ -24,8 +24,8 @@ function ExpertiseItem({ icon, title, description }: ExpertiseItemProps) {
     <li
       className="list-item cursor-pointer"
       onClick={() => setIsClicked(!isClicked)}
-      onMouseOver={() => setIsHover(true)}
-      onMouseOut={() => setIsHover(false)}
+      onMouseEnter={() => setIsHover(true)}
+      onMouseLeave={() => setIsHover(false)}
     >
       <div className="absolute -left-4 -ml-px flex h-8 w-8 items-center justify-center rounded-full bg-brand-500 ring-2 ring-white ring-brand-800">
         <div className="h-6 w-6 text-brand-800">{icon}</div>
