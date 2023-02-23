@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import { LightBulbIcon, RocketLaunchIcon } from '@heroicons/react/24/outline'
+import { IconBulb, IconTargetArrow } from '@tabler/icons-react'
 
 interface IconProps {
   icon: ReactNode
@@ -28,7 +28,7 @@ export default function MissionVision() {
               </h2>
             </div>
             <div className="flex items-center justify-center md:basis-1/4">
-              <Icon icon={<LightBulbIcon />} />
+              <Icon icon={<IconBulb className="h-full w-full" />} />
             </div>
           </div>
           <div className="flex flex-1 flex-col gap-y-4 md:flex-row">
@@ -52,7 +52,7 @@ export default function MissionVision() {
               </ul>
             </div>
             <div className="flex items-center justify-center md:order-first md:basis-1/4">
-              <Icon icon={<RocketLaunchIcon />} />
+              <Icon icon={<IconTargetArrow className="h-full w-full" />} />
             </div>
           </div>
         </div>

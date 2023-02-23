@@ -1,6 +1,6 @@
-import { ArchiveBoxIcon, BeakerIcon, CubeIcon, TruckIcon } from '@heroicons/react/24/solid'
 import React, { ReactNode, useMemo, useState } from 'react'
 import { BosqueIcon, BrumaIcon, CiclonIcon, FlamaIcon } from '@/components/icons'
+import { IconGitPullRequest, IconMicroscope, IconPackage, IconTruckDelivery } from '@tabler/icons-react'
 
 interface Stage {
   title: string
@@ -17,7 +17,7 @@ const stages: Stage[] = [
     title: 'Training',
     description: 'Adjust model parameters and learn from data',
     product: 'Bruma',
-    icon: <BeakerIcon />,
+    icon: <IconMicroscope className="h-full w-full" />,
     productIcon: <BrumaIcon />,
     textColor: 'text-[#00bbd5]',
     position: 'top-7 left-7',
@@ -26,7 +26,7 @@ const stages: Stage[] = [
     title: 'Versioning',
     description: 'Protect and track model changes',
     product: 'Bosque',
-    icon: <ArchiveBoxIcon />,
+    icon: <IconGitPullRequest className="h-full w-full" />,
     productIcon: <BosqueIcon />,
     textColor: 'text-[#9E744F]',
     position: 'top-7 right-7',
@@ -35,7 +35,7 @@ const stages: Stage[] = [
     title: 'Serving',
     description: 'Package and expose model APIs',
     product: 'Flama',
-    icon: <CubeIcon />,
+    icon: <IconPackage className="h-full w-full" />,
     productIcon: <FlamaIcon />,
     textColor: 'text-[#E25822]',
     position: 'bottom-7 right-7',
@@ -44,7 +44,7 @@ const stages: Stage[] = [
     title: 'Deploying',
     description: 'Productionalise models',
     product: 'Ciclon',
-    icon: <TruckIcon />,
+    icon: <IconTruckDelivery className="h-full w-full" />,
     productIcon: <CiclonIcon />,
     textColor: 'text-[#00976E]',
     position: 'bottom-7 left-7',

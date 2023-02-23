@@ -1,4 +1,4 @@
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
+import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react'
 import React from 'react'
 
 export interface ButtonProps {
@@ -30,9 +30,9 @@ export default function Button({
         leftIcon && 'pl-2'
       } ${rightIcon && 'pr-2'} ${className}`}
     >
-      {leftIcon && <ChevronLeftIcon className="h-4 pr-2" />}
+      {leftIcon && <IconChevronLeft className="h-4 pr-2" />}
       <span className="text-left font-semibold">{text}</span>
-      {rightIcon && <ChevronRightIcon className="h-4 pl-2" />}
+      {rightIcon && <IconChevronRight className="h-4 pl-2" />}
     </div>
   )
 }
