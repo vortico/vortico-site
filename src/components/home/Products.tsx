@@ -15,7 +15,15 @@ const products: Product[] = [
     icon: <FlamaIcon />,
     title: 'Flama',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet felis quis mi congue consectetur. Morbi a magna viverra, fermentum lacus a, mollis sapien. Nulla orci felis, porta sit amet iaculis id, porttitor eget mauris. Curabitur odio neque, molestie id nibh id, semper tincidunt sapien.',
+      'Flama is an advanced data-science oriented framework that allows you to rapidly build modern ' +
+      'and robust machine learning APIs. With Flama, you can deploy your models in seconds, ' +
+      'which means you can spend more time focusing on building great models and less time worrying' +
+      ' about the deployment process. Flama is designed to be user-friendly, with an intuitive interface ' +
+      'that allows you to quickly and easily build and deploy machine learning APIs. ' +
+      'With Flama, you can be confident that your models will perform at their best.' +
+      "Whether you're a data scientist, a software engineer, or just someone who wants to get started" +
+      ' with machine learning, Flama is the perfect tool to help you build and deploy your models ' +
+      'quickly and efficiently.',
     textColor: 'text-[#E25822]',
     href: 'https://flama.dev',
   },
@@ -23,7 +31,15 @@ const products: Product[] = [
     icon: <CiclonIcon />,
     title: 'Ciclon',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet felis quis mi congue consectetur. Morbi a magna viverra, fermentum lacus a, mollis sapien. Nulla orci felis, porta sit amet iaculis id, porttitor eget mauris. Curabitur odio neque, molestie id nibh id, semper tincidunt sapien.',
+      'Ciclon is designed to simplify the process of deploying machine-learning models. ' +
+      'With Ciclon, you can deploy machine-learning models seamlessly and rapidly, ' +
+      'without worrying about the headaches associated with traditional deployment methods. ' +
+      'This product is fast and scalable, allowing you to deploy your models in a serverless environment, ' +
+      "which means you don't have to worry about managing infrastructure. " +
+      'Ciclon is designed to make the deployment process as easy as possible, ' +
+      'with intuitive interfaces and automated processes that take care of the heavy lifting for you. ' +
+      "Whether you're a data scientist or a software engineer, Ciclon is the perfect tool to help you get " +
+      'your machine-learning models up and running quickly and efficiently.',
     textColor: 'text-[#00976E]',
     href: 'https://ciclon.dev',
   },
@@ -31,7 +47,14 @@ const products: Product[] = [
     icon: <BosqueIcon />,
     title: 'Bosque',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet felis quis mi congue consectetur. Morbi a magna viverra, fermentum lacus a, mollis sapien. Nulla orci felis, porta sit amet iaculis id, porttitor eget mauris. Curabitur odio neque, molestie id nibh id, semper tincidunt sapien.',
+      'Bosque is a powerful tool designed for version-controlling machine-learning models in an efficient ' +
+      "and secure way. Bosque offers a robust set of features that allow you to manage and control your models' " +
+      'versions with ease, ensuring that you always have access to the most up-to-date versions. ' +
+      'Bosque also integrates perfectly with Flama and Ciclon. ' +
+      'This integration allows you to seamlessly deploy your models in a serverless environment, ' +
+      "ensuring that you can easily manage and control your models' versions, and rapidly deploy new models. " +
+      'With Bosque, you can be confident that your machine learning models are always up-to-date, secure,' +
+      ' and efficient, allowing you to focus on building great models and delivering value to your users.',
     textColor: 'text-[#9E744F]',
     href: 'https://bosque.dev',
   },
@@ -39,7 +62,15 @@ const products: Product[] = [
     icon: <BrumaIcon />,
     title: 'Bruma',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet felis quis mi congue consectetur. Morbi a magna viverra, fermentum lacus a, mollis sapien. Nulla orci felis, porta sit amet iaculis id, porttitor eget mauris. Curabitur odio neque, molestie id nibh id, semper tincidunt sapien.',
+      'Bruma is a data-science framework that has been specifically designed to simplify and ' +
+      'standardize the training steps of any machine-learning problem. ' +
+      'Bruma is perfectly integrated with Flama, Ciclon, and Bosque, which makes it easy to manage' +
+      " your models' training, deployment, and version control processes. This framework is suitable " +
+      'for both experimentation and productionalization, allowing you to streamline the process of training' +
+      ' and deploying models from the very beginning. Bruma is designed to be user-friendly,' +
+      ' with an intuitive interface that allows you to quickly and easily create training pipelines ' +
+      'for your machine learning models. Bruma is an essential tool for anyone looking to streamline their' +
+      ' machine learning workflows and build more efficient and effective models.',
     textColor: 'text-[#00bbd5]',
     href: 'https://bruma.dev',
   },
