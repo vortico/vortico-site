@@ -22,10 +22,11 @@ export default function MissionVision() {
         <div className="flex flex-col gap-y-16">
           <div className="flex flex-1 flex-col gap-y-4 md:flex-row">
             <div className="md:basis-3/4">
-              <h2 className="text-2xl font-bold lg:text-3xl">
+              <h2 className="text-2xl font-bold lg:text-3xl">The future of ML development and deployment</h2>
+              <p className="text-lg">
                 Transform the ML arena by creating an environment where the development and deployment of products is as
                 simple, straightforward, and resilient as possible.
-              </h2>
+              </p>
             </div>
             <div className="flex items-center justify-center md:basis-1/4">
               <Icon icon={<IconBulb className="h-full w-full" />} />
