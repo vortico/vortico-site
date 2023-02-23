@@ -95,7 +95,7 @@ function Products() {
 function SocialNetworks() {
   return (
     <div className="space-y-4">
-      <h2 className="text-lg font-semibold text-primary-100">Social Media</h2>
+      <h2 className="text-lg font-semibold text-primary-100">Social</h2>
       <ul></ul>
     </div>
   )
