@@ -6,14 +6,14 @@
   "display": "standalone",
   "icons": [
     {
-      "src": "/favicon/icon-192x192.png",
+      "src": "/favicon/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/favicon/icon-512x512.png",
-      "sizes": "512x512a",
+      "src": "/favicon/icon-512.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]
