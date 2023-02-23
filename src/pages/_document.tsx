@@ -8,7 +8,7 @@ class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" />
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" />
           {process.env.NODE_ENV === 'production' ? (
             <>

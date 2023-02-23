@@ -1,0 +1,20 @@
+{
+  "name": "Vortico",
+  "start_url": "/",
+  "theme_color": "#008080",
+  "background_color": "#008080",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/favicon/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon/icon-512x512.png",
+      "sizes": "512x512a",
+      "type": "image/png"
+    }
+  ]
+}
