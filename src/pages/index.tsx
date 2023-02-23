@@ -20,9 +20,9 @@ export default function Home() {
         <main className="space-y-20 bg-primary-900/50 py-20 sm:space-y-32 sm:py-32 md:space-y-40 md:py-40">
           <MissionVision />
           <Expertise />
+          <WriteUs />
           <MachineLearningLifecycle />
           <Products />
-          <WriteUs />
         </main>
         <Footer />
       </>
