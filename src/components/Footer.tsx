@@ -27,9 +27,9 @@ const expertise: Expertise[] = [
 
 function Expertise() {
   return (
-    <div className="space-y-4">
+    <div className="flex h-full flex-col space-y-4">
       <h2 className="text-lg font-semibold text-primary-100">Expertise</h2>
-      <ul className="list-none text-primary-300">
+      <ul className="flex h-full list-none flex-col items-start justify-around gap-y-2 text-primary-300">
         {expertise.map((item, i) => (
           <li key={i}>
             <Link href={item.href}>{item.title}</Link>
@@ -76,9 +76,9 @@ const products: Product[] = [
 
 function Products() {
   return (
-    <div className="space-y-4">
+    <div className="flex h-full flex-col space-y-4">
       <h2 className="text-lg font-semibold text-primary-100">Products</h2>
-      <ul className="list-none space-y-4 text-primary-300">
+      <ul className="flex h-full list-none flex-col items-start justify-between gap-y-2 text-primary-300">
         {products.map((product, i) => (
           <li key={i}>
             <Link className="flex w-fit" href={product.href}>
@@ -104,7 +104,7 @@ function SocialNetworks() {
 export default function Footer() {
   return (
     <footer className="border-t border-brand-500 bg-primary-900">
-      <div className="mx-auto max-w-[90rem] space-y-16 divide-y divide-primary-700 px-4 pb-16 pt-8 text-sm leading-6 sm:px-6 md:px-8">
+      <div className="mx-auto flex max-w-[90rem] flex-1 flex-col gap-y-16 divide-y divide-primary-700 px-4 pb-16 pt-8 text-sm leading-6 sm:px-6 md:px-8">
         <div className="grid grid-cols-2 gap-x-20 gap-y-10 md:grid-cols-4">
           <Contact />
           <Expertise />
