@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 import { BosqueIcon, BrumaIcon, CiclonIcon, FlamaIcon, VorticoIcon } from '@/components/icons'
-import { IconBrandGithub, IconBrandLinkedin, IconBrandTwitter, IconBrandMedium } from '@tabler/icons-react'
+import { IconBrandGithub, IconBrandLinkedin, IconBrandMedium, IconBrandTwitter } from '@tabler/icons-react'
 
 import Link from '@/components/Link'
 
@@ -76,34 +76,6 @@ const products: Product[] = [
   },
 ]
 
-interface SocialIcon {
-  icon: ReactNode
-  title: string
-  href: string
-}
-const socials: SocialIcon[] = [
-  {
-    icon: <IconBrandGithub />,
-    title: 'GitHub',
-    href: 'https://github.com/vortico/',
-  },
-  {
-    icon: <IconBrandLinkedin />,
-    title: 'LinkedIn',
-    href: 'https://www.linkedin.com/company/vortico-tech/',
-  },
-  {
-    icon: <IconBrandTwitter />,
-    title: 'Twitter',
-    href: 'https://twitter.com/vortico_tech',
-  },
-  {
-    icon: <IconBrandMedium />,
-    title: 'Medium',
-    href: 'https://vortico.medium.com/',
-  },
-]
-
 function Products() {
   return (
     <div className="flex h-full flex-col space-y-4">
@@ -111,7 +83,7 @@ function Products() {
       <ul className="flex h-full list-none flex-col items-start justify-between gap-y-2 text-primary-300">
         {products.map((product, i) => (
           <li key={i}>
-            <Link className="flex w-fit" href={product.href}>
+            <Link className="flex items-center justify-start gap-x-1" href={product.href}>
               <div className={`h-6 w-6 ${product.textColor}`}>{product.icon}</div>
               <div className={`${product.textColor}`}>{product.title}</div>
             </Link>
@@ -122,15 +94,44 @@ function Products() {
   )
 }
 
-function SocialNetworks() {
+interface Social {
+  icon: ReactNode
+  title: string
+  href: string
+}
+
+const socials: Social[] = [
+  {
+    icon: <IconBrandGithub className="h-full w-full" />,
+    title: 'GitHub',
+    href: 'https://github.com/vortico/',
+  },
+  {
+    icon: <IconBrandLinkedin className="h-full w-full" />,
+    title: 'LinkedIn',
+    href: 'https://www.linkedin.com/company/vortico-tech/',
+  },
+  {
+    icon: <IconBrandTwitter className="h-full w-full" />,
+    title: 'Twitter',
+    href: 'https://twitter.com/vortico_tech',
+  },
+  {
+    icon: <IconBrandMedium className="h-full w-full" />,
+    title: 'Medium',
+    href: 'https://vortico.medium.com/',
+  },
+]
+
+function Social() {
   return (
-    <div className="space-y-4">
+    <div className="flex h-full flex-col space-y-4">
       <h2 className="text-lg font-semibold text-primary-100">Social</h2>
-      <ul className="list-none space-y-3 text-primary-300">
+      <ul className="flex h-full list-none flex-col items-start justify-between gap-y-2 text-primary-300">
         {socials.map((social, i) => (
           <li key={i}>
             <Link href={social.href}>
-              <div className="flex items-center gap-x-3">
+              <div className="flex items-center justify-start gap-x-2">
                 <div className="h-6 w-6 text-primary-300">{social.icon}</div>
                 <div>{social.title}</div>
               </div>
@@ -150,7 +151,7 @@ export default function Footer() {
           <Contact />
           <Expertise />
           <Products />
-          <SocialNetworks />
+          <Social />
         </div>
         <div className="flex items-center justify-between pt-10">
           <div className="flex items-center gap-x-2">

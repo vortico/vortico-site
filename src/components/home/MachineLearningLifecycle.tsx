@@ -1,4 +1,4 @@
-import React, { ReactNode, useMemo, useState } from 'react'
+import React, { ReactNode, useEffect, useMemo, useState } from 'react'
 import { BosqueIcon, BrumaIcon, CiclonIcon, FlamaIcon } from '@/components/icons'
 import { IconGitPullRequest, IconMicroscope, IconPackage, IconTruckDelivery } from '@tabler/icons-react'
 
@@ -71,15 +71,19 @@ interface StageIconProps {
 }
 
 function StageIcon({ stage, isActive, setIsActive }: StageIconProps) {
+  useEffect(() => {
+    let timeout: NodeJS.Timeout | undefined
+    if (isActive) timeout = setTimeout(() => setIsActive(false), 5000)
+    return () => {
+      clearTimeout(timeout)
+    }
+  })
   return (
     <div
       className={`h-12 w-12 rounded-full p-2 ring-2 ring-brand-800 ${
         isActive ? `bg-primary-500 ${stage.textColor}` : 'bg-brand-500 text-brand-800'
       }`}
-      onClick={() => {
-        setIsActive(true)
-        setTimeout(() => setIsActive(false), 5000)
-      }}
+      onClick={() => setIsActive(true)}
       onMouseEnter={() => setIsActive(true)}
       onMouseLeave={() => setIsActive(false)}
     >
@@ -100,7 +104,7 @@ function StageDescription({ stage }: StageDescriptionProps) {
       </h3>
       <h4 className="text-xl font-semibold text-primary-50">{stage?.title || 'Lifecycle'}</h4>
       <p>{stage?.description || 'A roadmap to success'}</p>
-      {!stage?.description && <div className="text-sm italic text-brand-500">Click a stage to see more</div>}
+      {!stage?.description && <div className="text-sm italic text-brand-500">Select a stage to see more</div>}
     </div>
   )
 }
