@@ -76,7 +76,10 @@ function StageIcon({ stage, isActive, setIsActive }: StageIconProps) {
       className={`h-12 w-12 rounded-full p-2 ring-2 ring-brand-800 ${
         isActive ? `bg-primary-500 ${stage.textColor}` : 'bg-brand-500 text-brand-800'
       }`}
-      onClick={() => setIsActive(isActive)}
+      onClick={() => {
+        setIsActive(!isActive)
+        setTimeout(() => setIsActive(false), 5000)
+      }}
       onMouseEnter={() => setIsActive(true)}
       onMouseLeave={() => setIsActive(false)}
     >
@@ -97,6 +100,7 @@ function StageDescription({ stage }: StageDescriptionProps) {
       </h3>
       <h4 className="text-xl font-semibold text-primary-50">{stage?.title || 'Lifecycle'}</h4>
       <p>{stage?.description || 'A roadmap to success'}</p>
+      {!stage?.description && <div className="text-sm italic text-brand-500">Click a stage to see more</div>}
     </div>
   )
 }
