@@ -1,5 +1,7 @@
 import React, { ReactNode } from 'react'
 import { BosqueIcon, BrumaIcon, CiclonIcon, FlamaIcon, VorticoIcon } from '@/components/icons'
+import { IconBrandGithub, IconBrandLinkedin, IconBrandTwitter, IconBrandMedium } from '@tabler/icons-react'
+
 import Link from '@/components/Link'
 
 function Contact() {
@@ -74,6 +76,34 @@ const products: Product[] = [
   },
 ]
 
+interface SocialIcon {
+  icon: ReactNode
+  title: string
+  href: string
+}
+const socials: SocialIcon[] = [
+  {
+    icon: <IconBrandGithub />,
+    title: 'GitHub',
+    href: 'https://github.com/vortico/',
+  },
+  {
+    icon: <IconBrandLinkedin />,
+    title: 'LinkedIn',
+    href: 'https://www.linkedin.com/company/vortico-tech/',
+  },
+  {
+    icon: <IconBrandTwitter />,
+    title: 'Twitter',
+    href: 'https://twitter.com/vortico_tech',
+  },
+  {
+    icon: <IconBrandMedium />,
+    title: 'Medium',
+    href: 'https://vortico.medium.com/',
+  },
+]
+
 function Products() {
   return (
     <div className="flex h-full flex-col space-y-4">
@@ -96,7 +126,18 @@ function SocialNetworks() {
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-semibold text-primary-100">Social</h2>
-      <ul></ul>
+      <ul className="list-none space-y-3 text-primary-300">
+        {socials.map((social, i) => (
+          <li key={i}>
+            <Link href={social.href}>
+              <div className="flex items-center gap-x-3">
+                <div className="h-6 w-6 text-primary-300">{social.icon}</div>
+                <div>{social.title}</div>
+              </div>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
