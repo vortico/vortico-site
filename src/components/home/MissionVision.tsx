@@ -19,10 +19,10 @@ export default function MissionVision() {
   return (
     <section id="mission-vision">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 md:px-8">
-        <div className="flex flex-col gap-y-16">
+        <h2 className="text-3xl font-bold lg:text-5xl">The future of Machine Learning development and deployment</h2>
+        <div className="mt-8 flex flex-col gap-y-16">
           <div className="flex flex-1 flex-col gap-y-4 md:flex-row">
             <div className="md:basis-3/4">
-              <h2 className="text-2xl font-bold lg:text-3xl">The future of ML development and deployment</h2>
               <p className="text-lg">
                 Transform the ML arena by creating an environment where the development and deployment of products is as
                 simple, straightforward, and resilient as possible.
@@ -33,7 +33,7 @@ export default function MissionVision() {
             </div>
           </div>
           <div className="flex flex-1 flex-col gap-y-4 md:flex-row">
-            <div className="md:basis-3/4">
+            <div className="space-y-4 md:basis-3/4">
               <p className="text-lg">Our mission is to simplify the building and deployment of ML solutions by:</p>
               <ul className="mt-4 list-inside list-disc space-y-4">
                 <li>
