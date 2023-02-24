@@ -1,4 +1,5 @@
 import React, { ReactNode, useEffect, useState } from 'react'
+import Menu from '@/components/Menu'
 
 interface MainHeaderProps {
   children?: ReactNode
@@ -35,7 +36,9 @@ export default function Header({ children }: MainHeaderProps) {
       `}
     >
       <div className="mx-auto flex max-w-[90rem] flex-1 flex-col divide-y divide-primary-300 px-4 dark:divide-primary-700 sm:px-6 md:px-8">
-        <div className="py-4 lg:py-6">{/* <Menu /> */}</div>
+        <div className="py-4 lg:py-6">
+          <Menu />
+        </div>
         {children && <div className="py-4 lg:hidden lg:py-6">{children}</div>}
       </div>
     </header>

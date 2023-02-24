@@ -111,7 +111,7 @@ export default function MachineLearningLifecycle() {
   const selectedStage = useMemo<Stage | undefined>(() => (active !== null ? stages[active] : undefined), [active])
 
   return (
-    <section id="ml-cycle-of-life">
+    <section id="ml-lifecycle">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 md:px-8">
         <div className="mx-auto h-80 w-80">
           <div className="absolute h-80 w-80">
