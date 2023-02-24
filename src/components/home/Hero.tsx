@@ -21,7 +21,7 @@ export default function Hero() {
           it can be!
         </p>*/}
         <div className="mt-20 h-12 w-auto">
-          <LinkButton className="px-10 text-lg" color="brand" text="About us" href="https://github.com/vortico/" />
+          <LinkButton className="px-10 text-lg" color="brand" text="About us" href="/team" />
         </div>
       </section>
     </>

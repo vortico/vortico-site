@@ -13,7 +13,11 @@ function Logo() {
   )
 }
 
-function NavList({ ...props }: React.ComponentProps<'ul'>) {
+interface NavListProps extends React.ComponentProps<'ul'> {
+  onClose?(): void
+}
+
+function NavList({ onClose, ...props }: NavListProps) {
   const entries = [
     { href: '/#products', title: 'Products' },
     { href: '/#expertise', title: 'Expertise' },
@@ -25,7 +29,7 @@ function NavList({ ...props }: React.ComponentProps<'ul'>) {
   return (
     <ul {...props}>
       {entries.map((entry) => (
-        <li key={entry.href}>
+        <li key={entry.href} onClick={() => onClose && onClose()}>
           <Link href={entry.href} className="block text-primary-300 hover:text-brand-400">
             {entry.title}
           </Link>
@@ -53,10 +57,13 @@ function FloatMenu({ onClose }: FloatMenuProps) {
       />
       <div className="relative rounded bg-primary-100 py-6 text-base font-semibold text-primary-600 shadow-lg dark:bg-primary-800 dark:text-primary-400">
         <button className="absolute top-5 right-5 flex h-8 w-8 items-center justify-center text-primary-400 hover:text-primary-500 dark:text-primary-600 dark:hover:text-primary-500">
-          <IconX className="h-5 w-5" onClick={onClose} aria-label="close menu" />
+          <IconX className="h-5 w-5 text-primary-300" onClick={onClose} aria-label="close menu" />
         </button>
-        <nav className="px-6 pb-6">
-          <NavList className="flex flex-col gap-6 text-lg font-medium text-primary-600 dark:text-primary-400 " />
+        <nav className="px-6">
+          <NavList
+            className="flex flex-col gap-6 text-lg font-medium text-primary-600 dark:text-primary-400"
+            onClose={onClose}
+          />
         </nav>
       </div>
     </div>
@@ -91,7 +98,7 @@ export default function Menu() {
             onClick={onOpen}
             aria-label="Open menu"
           >
-            <IconMenu2 className="h-5 w-5" />
+            <IconMenu2 className="h-5 w-5 text-primary-300" />
           </button>
         </div>
       </div>
