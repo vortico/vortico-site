@@ -77,7 +77,7 @@ function StageIcon({ stage, isActive, setIsActive }: StageIconProps) {
         isActive ? `bg-primary-500 ${stage.textColor}` : 'bg-brand-500 text-brand-800'
       }`}
       onClick={() => {
-        setIsActive(!isActive)
+        setIsActive(true)
         setTimeout(() => setIsActive(false), 5000)
       }}
       onMouseEnter={() => setIsActive(true)}
