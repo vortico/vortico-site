@@ -1,14 +1,39 @@
 import React, { ReactNode } from 'react'
 import { BosqueIcon, BrumaIcon, CiclonIcon, FlamaIcon, VorticoIcon } from '@/components/icons'
-import { IconBrandGithub, IconBrandLinkedin, IconBrandMedium, IconBrandTwitter } from '@tabler/icons-react'
+import { IconBrandGithub, IconBrandLinkedin, IconBrandMedium, IconBrandTwitter, IconMail } from '@tabler/icons-react'
 
 import Link from '@/components/Link'
 
+interface Address {
+  icon: ReactNode
+  title: string
+  href: string
+}
+
+const address: Address[] = [
+  {
+    icon: <IconMail className="h-full w-full" />,
+    title: 'vortico@vortico.tech',
+    href: 'mailto: vortico@vortico.tech',
+  },
+]
+
 function Contact() {
   return (
-    <div className="space-y-4">
+    <div className="flex h-full flex-col space-y-4">
       <h2 className="text-lg font-semibold text-primary-100">Contact</h2>
-      <ul></ul>
+      <ul className="flex h-full list-none flex-col items-start justify-between gap-y-2 text-primary-300">
+        {address.map((contact, i) => (
+          <li key={i}>
+            <Link href={contact.href}>
+              <div className="flex items-center justify-start gap-x-2">
+                <div className="h-6 w-6 text-primary-300">{contact.icon}</div>
+                <div>{contact.title}</div>
+              </div>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
