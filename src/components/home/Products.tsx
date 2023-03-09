@@ -1,4 +1,4 @@
-import React, { ReactNode, useCallback, useMemo, useState } from 'react'
+import React, { ReactNode, useCallback, useMemo, useRef, useState } from 'react'
 import LinkButton from '@/components/LinkButton'
 import { BosqueIcon, BrumaIcon, CiclonIcon, FlamaIcon } from '@/components/icons'
 
@@ -125,6 +125,7 @@ function ProductsDescription({ product }: ProductDescriptionProps) {
 
 export default function Products() {
   const [selected, setSelected] = useState<number>(0)
+  const descriptionRef = useRef<HTMLDivElement>(null)
 
   const selectedProduct = useMemo<Product>(() => products[selected], [selected])
 
@@ -133,6 +134,11 @@ export default function Products() {
     (i: number) => {
       setIsOpen(i === selected ? !isOpen : true)
       setSelected(i)
+      if (!isOpen)
+        descriptionRef.current?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        })
     },
     [selected, setSelected, isOpen, setIsOpen]
   )
@@ -154,7 +160,10 @@ export default function Products() {
         </ul>
       </div>
       <div className="mt-10 overflow-hidden bg-primary-400/60 px-4 sm:px-6 md:px-8">
-        <div className={`mx-auto h-fit max-w-5xl transition-all duration-500  ${isOpen ? 'max-h-screen' : 'max-h-0'}`}>
+        <div
+          className={`mx-auto h-fit max-w-5xl transition-all duration-500  ${isOpen ? 'max-h-screen' : 'max-h-0'}`}
+          ref={descriptionRef}
+        >
           {selectedProduct && <ProductsDescription product={selectedProduct} />}
         </div>
       </div>
