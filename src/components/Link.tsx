@@ -1,12 +1,8 @@
-import React, { useEffect, useMemo, useState } from 'react'
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
+import React, { useEffect, useMemo, useState } from 'react'
 
-interface LinkProps extends React.ComponentProps<typeof NextLink> {
-  href: string
-}
-
-export default function Link({ href, children, ...props }: LinkProps) {
+export default function Link({ href, children, ...props }: React.ComponentProps<'a'>) {
   const { asPath } = useRouter()
   const [origin, setOrigin] = useState<string | null>(null)
 
@@ -14,18 +10,21 @@ export default function Link({ href, children, ...props }: LinkProps) {
     setOrigin(window.location.origin)
   }, [setOrigin])
 
-  const isSamePage = useMemo<boolean>(
-    () => origin !== null && new URL(asPath, origin).pathname === new URL(href, origin).pathname,
+  const isAnchor = useMemo<boolean>(
+    () =>
+      href === undefined ||
+      href.startsWith('#') ||
+      (origin !== null && new URL(asPath, origin).pathname === new URL(href, origin).pathname),
     [href, origin, asPath]
   )
 
-  return isSamePage ? (
+  if (href === undefined) return <a>{children}</a>
+
+  return isAnchor ? (
     <a href={href} {...props}>
       {children}
     </a>
   ) : (
-    <NextLink href={href} {...props}>
-      {children}
-    </NextLink>
+    <NextLink href={href}>{children}</NextLink>
   )
 }
