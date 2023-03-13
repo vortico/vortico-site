@@ -134,11 +134,7 @@ export default function Products() {
     (i: number) => {
       setIsOpen(i === selected ? !isOpen : true)
       setSelected(i)
-      if (!isOpen)
-        descriptionRef.current?.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        })
+      if (!isOpen) descriptionRef.current?.scrollIntoView({ block: 'center' })
     },
     [selected, setSelected, isOpen, setIsOpen]
   )

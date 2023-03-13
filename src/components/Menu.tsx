@@ -1,12 +1,12 @@
 import { VorticoIcon } from '@/components/icons'
-import Link from 'next/link'
 import React, { useCallback, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { IconMenu2, IconX } from '@tabler/icons-react'
+import Link from '@/components/Link'
 
 function Logo() {
   return (
-    <Link href="/" className="flex items-center justify-start gap-2 text-brand-500" aria-label="Flama logo">
+    <Link href="/" className="flex items-center justify-start gap-2 text-brand-500" aria-label="Vortico logo">
       <VorticoIcon className="h-5 w-5 lg:h-6 lg:w-6" />
       <span className="text-xl lg:text-2xl">Vortico</span>
     </Link>

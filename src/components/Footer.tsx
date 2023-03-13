@@ -46,7 +46,7 @@ interface Expertise {
 const expertise: Expertise[] = [
   { title: 'Machine Learning', href: '/#expertise-machine-learning' },
   { title: 'Software Development', href: '/#expertise-software-development' },
-  { title: 'Software Architecture', href: '/#expertise-sofware-architecture' },
+  { title: 'Software Architecture', href: '/#expertise-software-architecture' },
   { title: 'Cloud Solutions & Innovation', href: '/#expertise-cloud-solutions' },
   { title: 'FinTech & WealthTech', href: '/#expertise-fintech-wealthtech' },
   { title: 'Tech Training & Courses', href: '/#expertise-tech-training' },
